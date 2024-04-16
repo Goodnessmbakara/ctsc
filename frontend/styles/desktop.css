@@ -7,12 +7,11 @@
         max-height: 4556px;
 
         /* Background */
-        background: #E3E9F2;
+        background: var(--color-default);
 
     }
 
     header {
-        background-color: var(--color-background);
         display: flex;
         flex-flow: column;
         align-items: center;
@@ -27,12 +26,50 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        /* align-self: normal; */
         height: 26px;
+        padding: 0 0 2rem 2rem;
+    }
+
+    nav {
+        /* padding: 0 32px; */
+        display: flex;
+        gap: 2rem;
+    }
+
+    nav a {
+        color: var(--color-black-2);
+        position: relative;
+    }
+
+    nav a.active {
+        color: var(--color-primary-2);
+    }
+
+    .dropdownMenu {
+        position: absolute;
+        /* Absolute positioning for flexible placement */
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 5px;
+        display: none;
+        /* Hide initially */
+    }
+
+    .dropdownMenu li {
+        list-style: none;
+        /* Remove default bullet points */
+        margin: 0;
+        padding: 5px;
+    }
+
+    .dropdownMenu a {
+        text-decoration: none;
+        color: black;
     }
 
     .logo {
         color: var(--color-primary-1);
+        font-size: 1.5rem;
     }
 
     .hero {
@@ -54,10 +91,16 @@
     .hero h1 {
         font-size: 2em;
         margin-bottom: 10px;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 1rem;
+        border-radius: 0.3rem;
     }
 
     .hero p {
         font-size: 1.2em;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 1rem;
+        border-radius: 0.3rem;
     }
 
     .hero .cta {
@@ -133,8 +176,8 @@
 
     /* News Section */
     .news-section {
-        background-color: var(--color-primary-2);
-        background-color:#a4ccfc;
+        background-color: var(--color-news-section);
+        background-color: #a4ccfc;
     }
 
     .news-section .cards {
@@ -223,10 +266,13 @@
     /* Contact form section */
     input {
         width: 100%;
-        max-width: 724px;
+        /* max-width: 724px; */
+        max-width: 540px;
         padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
+        /* margin: 8px 0; */
+        margin: 1rem auto;
+        /* display: inline-block; */
+        display: block;
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
@@ -242,9 +288,9 @@
         color: var(--color-white);
     }
 
-    input[type=submit]:hover {
+    /* button[type=submit]:hover {
         background-color: #45a049;
-    }
+    } */
 
     /* Footer */
     footer {
@@ -254,9 +300,16 @@
         justify-content: center;
         gap: 1rem;
         flex-direction: column;
+        background-color: var(--color-footer);
+        color: var(--color-white)
     }
-    footer > div:last-child {
+
+    footer>div:last-child {
         display: flex;
         gap: 1rem;
+    }
+
+    footer .logo {
+        color: var(--color-white);
     }
 }
