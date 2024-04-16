@@ -1,0 +1,12 @@
+/* Tablet Styles (576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .heading {
+        font-size: 1.75rem;
+        /* Adjust font size for tablets */
+    }
+
+    .content {
+        padding: 20px;
+        /* Adjust padding for tablets */
+    }
+}

@@ -1,0 +1,43 @@
+@import url('./variables.css');
+@import url('./desktop.css');
+@import url('./tablet.css');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section,
+header,
+footer {
+    text-align: center;
+    padding: calc(16px + 2vw) calc(16px + 1vw);
+    /* Example using calc() */
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Mobile Styles (Up to 575px) */
+@media (max-width: 575px) {
+    .heading {
+        font-size: 1.5rem;
+        /* Adjust font size for mobile */
+    }
+
+    .content {
+        padding: 16px;
+        /* Increase padding for better readability */
+    }
+}
