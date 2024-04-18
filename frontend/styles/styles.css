@@ -494,13 +494,13 @@ body {
 
 .news-card {
     height: 643px;
-    width: 100%;
+    /* width: 100%; */
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 20px;
-    background: linear-gradient(178.54deg, rgba(255, 255, 255, 0.1) 0.32%, rgba(28, 60, 97, 0.5) 83.44%);
+    background-color: linear-gradient(178.54deg, rgba(255, 255, 255, 0.1) 0.32%, rgba(28, 60, 97, 0.5) 83.44%);
     background-image: url('../assets/new-page-image-1.png');
 }
 
@@ -509,7 +509,7 @@ body {
     width: 24px;
     height: 24px;
     left: calc(100% - 3rem);
-    top: 32px;
+    top: 2em;
 
     svg {
         fill: red
@@ -521,7 +521,7 @@ body {
     width: 24px;
     height: 24px;
     left: calc(100% - 3rem);
-    bottom: 32px;
+    bottom: 2em;
 
     svg {
         fill: red;
@@ -536,13 +536,12 @@ body {
     gap: 0.5rem;
 
     position: absolute;
-    width: 70%;
-    height: 188px;
-    height: 188px;
-    height: 12rem;
-    left: 48px;
-    top: 404px;
-    top: 25.25rem;
+    width: 85%;
+    /* height: 188px; */
+    /* height: 188px; */
+    /* height: 12rem; */
+    left: 4%;
+    top: 63%;
 }
 
 .texts {
@@ -580,17 +579,27 @@ body {
 }
 
 .news-cards {
+    margin-top: 3rem;
     position: relative;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    /* grid-template-rows: repeat(2, 1fr); */
-    grid-auto-rows: minmax(100px, auto);
-    background-color: red !important;
+    grid-template-rows: repeat(2, 1fr);
+    gap:1rem;
+    /* grid-auto-rows: minmax(100px, 300px); */
+    /* background-color: red !important;
     margin-block: 3.5rem;
-    /* height: 10rem; */
+    padding: 2rem; */
+    /* height: auto; */
 
     .news-card {
         height: auto;
+        min-height: 30rem;
+        max-height: 100%;
+        padding: 2rem;
+
+        .texts {
+            top: 30%;
+        }
     }
 }
 
@@ -605,7 +614,8 @@ body {
 .news-cards {
     .card-1 {
         grid-area: 1/1/2/7;
-        width: 50rem;
+        /* height: 30rem; */
+        /* height: 35rem; */
     }
 
     .card-2 {
