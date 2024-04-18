@@ -12,6 +12,7 @@
 
 section,
 header,
+main,
 footer {
     text-align: center;
     padding: calc(16px + 2vw) calc(16px + 1vw);
@@ -58,7 +59,6 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    /* height: 26px; */
     height: 10vh;
     position: fixed;
     top: 0;
@@ -405,6 +405,221 @@ footer .logo {
     color: var(--color-white);
 }
 
+/* News Page */
+body {
+    /* background-color: blue; */
+}
+
+.news-header {
+    height: calc(70vh + 1rem);
+    height: unset;
+    padding: 3rem;
+    /* background-color: red; */
+    overflow: hidden;
+}
+
+.news-page-hero {
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    /* background-color: azure; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    height: 22rem;
+}
+
+.news-page-hero>div {
+    position: absolute;
+    height: 10rem;
+    top: 0;
+    border-radius: 1rem;
+    padding: 10rem !important;
+}
+
+.news-page-hero div:nth-child(1) {
+    z-index: 1;
+}
+
+.news-page-hero div:nth-child(2),
+.news-page-hero div:nth-child(3) {
+    width: 80%;
+    background-color: #C6D3EC;
+    top: 2rem;
+}
+
+.news-page-hero div:nth-child(2) {
+    background-color: #8CA8D9;
+    width: 90%;
+}
+
+.news-page-hero div:nth-child(3) {
+    z-index: -4;
+    top: 4rem;
+}
+
+.news-mast {
+    width: 100%;
+    background-color: var(--color-primary-1);
+    position: static;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    line-height: 3rem;
+    justify-content: center;
+}
+
+.news-search-div {
+    width: 50rem;
+}
+
+
+.news-main>div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    /* padding: 1rem; */
+    margin-bottom: 2rem;
+
+    span {
+        display: block;
+        border: 1px var(--color-primary-1) solid;
+        padding: 1rem 2rem;
+        border-radius: 0.4rem;
+        background-color: var(--color-news-section);
+    }
+}
+
+.news-card {
+    height: 643px;
+    width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    background: linear-gradient(178.54deg, rgba(255, 255, 255, 0.1) 0.32%, rgba(28, 60, 97, 0.5) 83.44%);
+    background-image: url('../assets/new-page-image-1.png');
+}
+
+.news-card>.arrow-up-right {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: calc(100% - 3rem);
+    top: 32px;
+
+    svg {
+        fill: red
+    }
+}
+
+.news-card>.icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: calc(100% - 3rem);
+    bottom: 32px;
+
+    svg {
+        fill: red;
+    }
+}
+
+.news-card>.texts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    /* padding: 0px; */
+    gap: 0.5rem;
+
+    position: absolute;
+    width: 70%;
+    height: 188px;
+    height: 188px;
+    height: 12rem;
+    left: 48px;
+    top: 404px;
+    top: 25.25rem;
+}
+
+.texts {
+    text-align: left;
+
+    span {
+        font-family: 'Be Vietnam Pro';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+
+        color: #FFFFFF;
+    }
+
+    h3 {
+        font-family: 'Be Vietnam Pro';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 46px;
+
+        color: #FFFFFF;
+    }
+
+    p {
+        font-family: 'Be Vietnam Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+
+        color: #FFFFFF;
+    }
+}
+
+.news-cards {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+    grid-auto-rows: minmax(100px, auto);
+    background-color: red !important;
+    margin-block: 3.5rem;
+    /* height: 10rem; */
+
+    .news-card {
+        height: auto;
+    }
+}
+
+.news-cards>div:nth-child(odd) {
+    background-image: url('../assets/chef-pots.png');
+}
+
+.news-cards>div:nth-child(even) {
+    background-image: url('../assets/cards.jpeg');
+}
+
+.news-cards {
+    .card-1 {
+        grid-area: 1/1/2/7;
+        width: 50rem;
+    }
+
+    .card-2 {
+        grid-area: 1/span 4;
+    }
+
+    .card-3 {
+        grid-area: 2/span 4;
+    }
+
+    .card-4 {
+        grid-area: 2/5/3/11;
+    }
+}
 
 /* Mobile Styles (Up to 575px) */
 /*@media (max-width: 575px) {
